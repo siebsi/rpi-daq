@@ -1,0 +1,64 @@
+DUT:
+  Broken_flag: Put broken flag here
+  Chip0:
+    Result: Put result here (PASS or FAIL or PASS -NOISY or PASS -NOISY -TO ISSUE
+      or PASS -TO ISSUE)
+    Rm_Issue: Put rm issues here
+    SCA: {broken_ch_list: common_variables.broken_ch_list, chip_broken: common_variables.chip_broken,
+      chip_noisy: common_variables.chip_noisy, n_broken_ch_chip: common_variables.n_broken_ch_chip,
+      n_noisy_ch_chip: common_variables.n_noisy_ch_chip, noisy_ch_list: common_variables.noisy_ch_list,
+      th_broken_ch_chip: common_variables.th_broken_ch_chip, th_broken_per_ch: common_variables.th_broken_per_ch,
+      th_n_ev_broken: common_variables.th_n_ev_broken, th_n_ev_noisy: common_variables.th_n_ev_noisy,
+      th_noisy_ch_chip: common_variables.th_noisy_ch_chip, th_noisy_per_ch: common_variables.th_noisy_per_ch}
+    ToA_ToT: {chip_to_issue: common_variables.chip_to_issue, n_to_issues_chip: common_variables.n_to_issues_chip,
+      th_n_ev_to_issue: common_variables.th_n_ev_to_issue, th_to_ch_issue_chip: common_variables.th_to_ch_issue_chip,
+      to_issue_ch_list: common_variables.to_issue_ch_list}
+  Chip1:
+    Result: Put result here (PASS or FAIL or PASS -NOISY or PASS -NOISY -TO ISSUE
+      or PASS -TO ISSUE)
+    Rm_Issue: Put rm issues here
+    SCA: {broken_ch_list: common_variables.broken_ch_list, chip_broken: common_variables.chip_broken,
+      chip_noisy: common_variables.chip_noisy, n_broken_ch_chip: common_variables.n_broken_ch_chip,
+      n_noisy_ch_chip: common_variables.n_noisy_ch_chip, noisy_ch_list: common_variables.noisy_ch_list,
+      th_broken_ch_chip: common_variables.th_broken_ch_chip, th_broken_per_ch: common_variables.th_broken_per_ch,
+      th_n_ev_broken: common_variables.th_n_ev_broken, th_n_ev_noisy: common_variables.th_n_ev_noisy,
+      th_noisy_ch_chip: common_variables.th_noisy_ch_chip, th_noisy_per_ch: common_variables.th_noisy_per_ch}
+    ToA_ToT: {chip_to_issue: common_variables.chip_to_issue, n_to_issues_chip: common_variables.n_to_issues_chip,
+      th_n_ev_to_issue: common_variables.th_n_ev_to_issue, th_to_ch_issue_chip: common_variables.th_to_ch_issue_chip,
+      to_issue_ch_list: common_variables.to_issue_ch_list}
+  Chip2:
+    Result: Put result here (PASS or FAIL or PASS -NOISY or PASS -NOISY -TO ISSUE
+      or PASS -TO ISSUE)
+    Rm_Issue: Put rm issues here
+    SCA: {broken_ch_list: common_variables.broken_ch_list, chip_broken: common_variables.chip_broken,
+      chip_noisy: common_variables.chip_noisy, n_broken_ch_chip: common_variables.n_broken_ch_chip,
+      n_noisy_ch_chip: common_variables.n_noisy_ch_chip, noisy_ch_list: common_variables.noisy_ch_list,
+      th_broken_ch_chip: common_variables.th_broken_ch_chip, th_broken_per_ch: common_variables.th_broken_per_ch,
+      th_n_ev_broken: common_variables.th_n_ev_broken, th_n_ev_noisy: common_variables.th_n_ev_noisy,
+      th_noisy_ch_chip: common_variables.th_noisy_ch_chip, th_noisy_per_ch: common_variables.th_noisy_per_ch}
+    ToA_ToT: {chip_to_issue: common_variables.chip_to_issue, n_to_issues_chip: common_variables.n_to_issues_chip,
+      th_n_ev_to_issue: common_variables.th_n_ev_to_issue, th_to_ch_issue_chip: common_variables.th_to_ch_issue_chip,
+      to_issue_ch_list: common_variables.to_issue_ch_list}
+  Chip3:
+    Result: Put result here (PASS or FAIL or PASS -NOISY or PASS -NOISY -TO ISSUE
+      or PASS -TO ISSUE)
+    Rm_Issue: Put rm issues here
+    SCA: {broken_ch_list: common_variables.broken_ch_list, chip_broken: common_variables.chip_broken,
+      chip_noisy: common_variables.chip_noisy, n_broken_ch_chip: common_variables.n_broken_ch_chip,
+      n_noisy_ch_chip: common_variables.n_noisy_ch_chip, noisy_ch_list: common_variables.noisy_ch_list,
+      th_broken_ch_chip: common_variables.th_broken_ch_chip, th_broken_per_ch: common_variables.th_broken_per_ch,
+      th_n_ev_broken: common_variables.th_n_ev_broken, th_n_ev_noisy: common_variables.th_n_ev_noisy,
+      th_noisy_ch_chip: common_variables.th_noisy_ch_chip, th_noisy_per_ch: common_variables.th_noisy_per_ch}
+    ToA_ToT: {chip_to_issue: common_variables.chip_to_issue, n_to_issues_chip: common_variables.n_to_issues_chip,
+      th_n_ev_to_issue: common_variables.th_n_ev_to_issue, th_to_ch_issue_chip: common_variables.th_to_ch_issue_chip,
+      to_issue_ch_list: common_variables.to_issue_ch_list}
+  DUT_ID: Put dut ID here
+  DUT_result: Put DUT result here (PASS or FAIL or NOISY)
+  Done_tests: {Rollmask_ON: If RM test is selected, SCA_ON: If SCA test is selected,
+    ToA_ToT_ON: If ToA/ToT test is selected}
+  Manufacturer: Manufacturer
+  Noisy_flag: Put noisy flag here
+  Number_of_events: Put number of events here
+  Timestamp: Put date and hour here
+  ToA_ToT_Issue_flag: Put ToA/ToT Issue flag here
+  Type_of_hardware: Put Hardware type here
