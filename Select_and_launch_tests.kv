@@ -1,0 +1,362 @@
+<Select_and_launch_tests>:
+    cols: 3
+    GridLayout:
+        id:lefttop
+        cols: 1
+        Label:
+            text: 'Tests ON/OFF'
+            color: 0,0,0,1
+            bold: True
+            canvas.before:
+                Color:
+                    rgba: 0.278, 0.569, 1, 1 #light blue
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        Button:
+            id: btnRM
+            text: 'Test full RollMask'
+            background_color: 0.5, 0.5, 0.5, 1 #gray
+            on_press: root.test_full_RollMask(self)
+        Button:
+            id: btnSCA
+            text: 'Test full SCA'
+            background_color: 0.5, 0.5, 0.5, 1 #gray
+            on_press: root.test_full_SCA(self)
+        Button:
+            id: btnTO
+            text: 'Test full TOA TOT'
+            background_color: 0.5, 0.5, 0.5, 1 #gray
+            on_press: root.test_full_ToT_ToA(self)
+        Button:
+            id: btnPRINT
+            text: 'Print unusual Data'
+            background_color: 0.5, 0.5, 0.5, 1 #gray
+            on_press: root.test_printUnusualData(self)
+    GridLayout:
+        id:middletop
+        cols: 2
+        Label:
+            text: 'General input'
+            color: 0,0,0,1
+            bold: True
+            canvas.before:
+                Color:
+                    rgba: 0.278, 0.569, 1, 1 #light blue
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        Button:
+            id: btnLAUNCH
+            text: 'LAUNCH'
+            background_color: 1, 0, 1, 1 #pink
+            on_press:root.launch_tests(self)
+        Label:
+            text: 'Number of Events'
+            color: 0,0,0,1
+            canvas.before:
+                Color:
+                    rgba: 0.278, 0.569, 1, 1 #light blue
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        TextInput:
+            id:ev
+            text: '10'
+        Label:
+            text: 'DUT-Name'
+            color: 0,0,0,1
+            canvas.before:
+                Color:
+                    rgba: 0.278, 0.569, 1, 1 #light blue
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        TextInput:
+            id:DUT
+            text: 'I am a fancy HB'
+        Label:
+            text: 'Type of Hardware'
+            color: 0,0,0,1
+            canvas.before:
+                Color:
+                    rgba: 0.278, 0.569, 1, 1 #light blue
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        TextInput:
+            id:Hardwaretype
+            text: 'I have silicon'
+        Label:
+            text: 'Manufacturer'
+            color: 0,0,0,1
+            canvas.before:
+                Color:
+                    rgba: 0.278, 0.569, 1, 1 #light blue
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        TextInput:
+            id:Manufacturer
+            text: 'Dave Barney?'
+
+    GridLayout:
+        id:righttop
+        cols:2
+        Label:
+            text: 'Injection Data'
+            color: 0,0,0,1
+            bold: True
+            canvas.before:
+                Color:
+                    rgba: 0.278, 0.569, 1, 1 #light blue
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        Button:
+            id: btnINJ
+            text: 'OFF'
+            background_color: 1, 0.6, 0.4, 1 #light orange
+            on_press: root.do_injection(self)
+        Label:
+            text: 'Acquisition Type'
+            color: 0,0,0,1
+            canvas.before:
+                Color:
+                    rgba: 0.278, 0.569, 1, 1 #light blue
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        TextInput:
+            id:acqtype
+            text: 'const_inj'
+        Label:
+            text: 'Injection DAC'
+            color: 0,0,0,1
+            canvas.before:
+                Color:
+                    rgba: 0.278, 0.569, 1, 1 #light blue
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        TextInput:
+            id:injDAC
+            text: '3000'
+        Label:
+            text: 'Pulse Delay'
+            color: 0,0,0,1
+            canvas.before:
+                Color:
+                    rgba: 0.278, 0.569, 1, 1 #light blue
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        TextInput:
+            id:delay
+            text: '47'
+        Label:
+            text: 'Channel (max 1 ch)'
+            color: 0,0,0,1
+            canvas.before:
+                Color:
+                    rgba: 0.278, 0.569, 1, 1 #light blue
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        TextInput:
+            id:inputch
+            text: '10'
+
+    Label:
+        id:leftdown
+        text: 'IV-curve'
+        canvas.before:
+            Color:
+                rgba: 0.278, 0.569, 1, 1 #light blue
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        id:middledown
+        cols:1
+        Label:
+            text: 'Output Result:'
+            color: 0,0,0,1
+            bold: True
+            canvas.before:
+                Color:
+                    rgba: root.col_DUT
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        GridLayout:
+            cols: 4
+            Label:
+                id: chip0
+                color: 0,0,0,1
+                text: 'Chip 0'
+                canvas.before:
+                    Color:
+                        rgba: root.col_chip0
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            Label:
+                id: chip1
+                text: 'Chip 1'
+                color: 0,0,0,1
+                canvas.before:
+                    Color:
+                        rgba: root.col_chip1
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            Label:
+                id: chip2
+                color: 0,0,0,1
+                text: 'Chip 2'
+                canvas.before:
+                    Color:
+                        rgba: root.col_chip2
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            Label:
+                id: chip3
+                color: 0,0,0,1
+                text: 'Chip 3'
+                canvas.before:
+                    Color:
+                        rgba: root.col_chip3
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            Label:
+                id: chip0RM
+                color: 0,0,0,1
+                text: 'RollMask'
+                canvas.before:
+                    Color:
+                        rgba: root.col_chip0RM
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            Label:
+                id: chip1RM
+                color: 0,0,0,1
+                text: 'RollMask'
+                canvas.before:
+                    Color:
+                        rgba: root.col_chip1RM
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            Label:
+                id: chip2RM
+                color: 0,0,0,1
+                text: 'RollMask'
+                canvas.before:
+                    Color:
+                        rgba: root.col_chip2RM
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            Label:
+                id:chip3RM
+                color: 0,0,0,1
+                text: 'RollMask'
+                canvas.before:
+                    Color:
+                        rgba: root.col_chip3RM
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            Label:
+                id: chip0SCA
+                text: 'SCA'
+                color: 0,0,0,1
+                canvas.before:
+                    Color:
+                        rgba: root.col_chip0SCA
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            Label:
+                id: chip1SCA
+                color: 0,0,0,1
+                text: 'SCA'
+                canvas.before:
+                    Color:
+                        rgba: root.col_chip1SCA
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            Label:
+                id: chip2SCA
+                color: 0,0,0,1
+                text: 'SCA'
+                canvas.before:
+                    Color:
+                        rgba: root.col_chip2SCA
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            Label:
+                id: chip3SCA
+                color: 0,0,0,1
+                text: 'SCA'
+                canvas.before:
+                    Color:
+                        rgba: root.col_chip3SCA
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            Label:
+                id: chip0TO
+                color: 0,0,0,1
+                text: 'ToA/ToT'
+                canvas.before:
+                    Color:
+                        rgba: root.col_chip0TO
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            Label:
+                id: chip1TO
+                color: 0,0,0,1
+                text: 'ToA/ToT'
+                canvas.before:
+                    Color:
+                        rgba: root.col_chip1TO
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            Label:
+                id: chip2TO
+                color: 0,0,0,1
+                text: 'ToA/ToT'
+                canvas.before:
+                    Color:
+                        rgba: root.col_chip2TO
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            Label:
+                id: chip3TO
+                color: 0,0,0,1
+                text: 'ToA/ToT'
+                canvas.before:
+                    Color:
+                        rgba: root.col_chip3TO
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+    Label:
+        id:rightdown
+        text:'Console-Output'
+        canvas.before:
+            Color:
+                rgba: 0.278, 0.569, 1, 1 #light blue
+            Rectangle:
+                pos: self.pos
+                size: self.size
